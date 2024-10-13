@@ -1,10 +1,10 @@
-package com.rio.Idao;
+package com.rio.Iservices;
 
 import java.util.List;
 
 import com.rio.entity.Category;
 
-public interface ICategoryDao {
+public interface ICategoryService {
 
 	List<Category> findByCategoryname(String catname);
 

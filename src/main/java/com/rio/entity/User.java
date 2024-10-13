@@ -1,4 +1,4 @@
-package com.rio.model;
+package com.rio.entity;
 
 public class User {
 

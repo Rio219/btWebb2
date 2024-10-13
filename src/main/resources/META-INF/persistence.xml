@@ -1,26 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<persistence version="3.0"
-	xmlns="https://jakarta.ee/xml/ns/persistence"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
-	<persistence-unit name="jpa-hibernate-mysql">
-		<class>com.tienda.entity.Category</class>
-		<class>com.tienda.entity.Video</class>
-		<class>com.tienda.entity.User</class>
-		<properties>
-			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/your_database_name" />
-			<property name="jakarta.persistence.jdbc.driver"
-				value="com.mysql.cj.jdbc.Driver" />
-			<property name="jakarta.persistence.jdbc.user"
-				value="your_username" />
-			<property name="jakarta.persistence.jdbc.password"
-				value="your_password" />
-			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.format_sql" value="true" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
-			<property name="hibernate.dialect"
-				value="org.hibernate.dialect.MySQLDialect" />
-		</properties>
-	</persistence-unit>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="jakarta_prueba">
+
+        <provider>dataSource</provider>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/?user=root"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="642277"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+    </persistence-unit>
 </persistence>
