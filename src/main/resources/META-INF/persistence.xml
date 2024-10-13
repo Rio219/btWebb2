@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.2" 
-   xmlns="http://xmlns.jcp.org/xml/ns/persistence"  
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence   
-    http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
-    <persistence-unit name="tienda" transaction-type="RESOURCE_LOCAL">
+<persistence version="3.0"
+	xmlns="https://jakarta.ee/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+	<persistence-unit name="jpa-hibernate-mysql">
+		<class>com.tienda.entity.Category</class>
+		<class>com.tienda.entity.Video</class>
+		<class>com.tienda.entity.User</class>
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://152.67.47.61:3306/tienda"/> 
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-            <property name="javax.persistence.jdbc.user" value="oscar"/> 
-            <property name="javax.persistence.jdbc.password" value="bimborico22D@"/>
-            <property name="hibernate.show_sql" value = "true" />  
-            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-            <property name="hibernate.format_sql" value = "true" />
-            <!--  
-            <property name="hibernate.format_sql" value = "true" />
-            <property name="javax.persistence.schema-generation.database.action" value="create"/> 
-            -->
-	    </properties>   
-	</persistence-unit>  
+			<property name="jakarta.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/your_database_name" />
+			<property name="jakarta.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="jakarta.persistence.jdbc.user"
+				value="your_username" />
+			<property name="jakarta.persistence.jdbc.password"
+				value="your_password" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQLDialect" />
+		</properties>
+	</persistence-unit>
 </persistence>

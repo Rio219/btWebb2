@@ -1,21 +1,21 @@
-package com.tienda.modelo;
+package com.rio.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 
 
 @Entity
 @Table(name="productos")
-public class Producto {
+public class Video {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,11 +31,11 @@ public class Producto {
 	@Column(name="fecha")
 	private LocalDate fecha = LocalDate.now();
 	
-	public Producto() {
+	public Video() {
 		
 	}
 	
-	public Producto(String nombre, String descripcion, BigDecimal presio, Categoria categoria, LocalDate fecha) {
+	public Video(String nombre, String descripcion, BigDecimal presio, Categoria categoria, LocalDate fecha) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.presio = presio;
