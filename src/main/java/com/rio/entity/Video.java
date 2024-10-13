@@ -63,10 +63,6 @@ public class Video implements Serializable {
 
 	private Category category;
 
-	public Video() {
-		
-	}
-
 	public String getVideoId() {
 		return videoId;
 	}
